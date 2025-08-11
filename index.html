@@ -1,1 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Training - Women Universities Pakistan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F1F5F8;
+            color: #1D1D1B;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #017CA5 0%, #5DBEDB 100%);
+            color: white;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -5%;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            animation: float 4s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .project-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .partners {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .partner-logo {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-logo img {
+            max-height: 50px;
+            max-width: 120px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            padding: 80px 0;
+            margin-top: -40px;
+            position: relative;
+            z-index: 2;
+            border-radius: 40px 40px 0 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #F1F5F8 0%, #E1E9ED 100%);
+            border: 2px solid #5DBEDB;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(1, 124, 165, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(1, 124, 165, 0.2);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #017CA5;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1D1D1B;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1D1D1B;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Objectives Grid */
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .objective-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #017CA5;
+            transition: all 0.3s ease;
+        }
+
+        .objective-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .objective-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #017CA5, #5DBEDB);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .objective-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #1D1D1B;
+        }
+
+        .objective-description {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Universities Section */
+        .universities-section {
+            background: #F1F5F8;
+            padding: 80px 0;
+        }
+
+        .universities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .university-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border-top: 5px solid #017CA5;
+        }
+
+        .university-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .university-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .university-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #017CA5, #5DBEDB);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .university-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1D1D1B;
+        }
+
+        .training-details {
+            margin-bottom: 20px;
+        }
+
+        .training-date {
+            font-size: 0.9rem;
+            color: #017CA5;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .training-participants {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .training-topics {
+            list-style: none;
+            padding: 0;
+        }
+
+        .training-topics li {
+            padding: 5px 0;
+            padding-left: 20px;
+            position: relative;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .training-topics li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #017CA5;
+            font-weight: bold;
+        }
+
+        /* Budget Section */
+        .budget-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .budget-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .budget-overview {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .total-budget {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #017CA5;
+            margin-bottom: 10px;
+        }
+
+        .budget-currency {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .budget-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .budget-item {
+            background: #F1F5F8;
+            padding: 30px 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #5DBEDB;
+            transition: all 0.3s ease;
+        }
+
+        .budget-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(1, 124, 165, 0.1);
+        }
+
+        .budget-amount {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #017CA5;
+            margin-bottom: 10px;
+        }
+
+        .budget-category {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 600;
+        }
+
+        /* Outcomes Section */
+        .outcomes-section {
+            background: linear-gradient(135deg, #017CA5 0%, #5DBEDB 100%);
+            color: white;
+            padding: 80px 0;
+        }
+
+        .outcomes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .outcome-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .outcome-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .outcome-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        /* SDGs Section */
+        .sdgs-section {
+            background: #F1F5F8;
+            padding: 80px 0;
+        }
+
+        .sdgs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .sdg-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 20px;
+            background: white;
+            border: 2px solid #5DBEDB;
+            transition: all 0.3s ease;
+        }
+
+        .sdg-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(1, 124, 165, 0.2);
+        }
+
+        .sdg-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #017CA5;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #1D1D1B;
+            color: white;
+            padding: 60px 0 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .footer-text {
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        .footer-partners {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-logo:hover {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            
+            .objectives-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .universities-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .outcomes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .partners {
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .partner-logo {
+                height: 70px;
+                padding: 10px 15px;
+            }
+
+            .partner-logo img {
+                max-height: 40px;
+                max-width: 100px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .objectives-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .universities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .budget-breakdown {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .outcomes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sdgs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-partners {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 40px 0;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 1rem;
+            }
+
+            .content-section {
+                padding: 60px 0;
+            }
+
+            .stats-section {
+                padding: 60px 0;
+            }
+
+            .universities-section {
+                padding: 60px 0;
+            }
+
+            .budget-section {
+                padding: 60px 0;
+            }
+
+            .outcomes-section {
+                padding: 60px 0;
+            }
+
+            .sdgs-section {
+                padding: 60px 0;
+            }
+
+            .partner-logo {
+                height: 60px;
+                padding: 8px 12px;
+            }
+
+            .partner-logo img {
+                max-height: 35px;
+                max-width: 80px;
+            }
+
+            .stat-card {
+                padding: 30px 20px;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .total-budget {
+                font-size: 2.5rem;
+            }
+
+            .objective-card {
+                padding: 30px 20px;
+            }
+
+            .university-card {
+                padding: 30px 20px;
+            }
+
+            .outcome-card {
+                padding: 30px 20px;
+            }
+
+            .budget-breakdown {
+                grid-template-columns: 1fr;
+            }
+
+            .sdg-card {
+                padding: 20px 15px;
+            }
+
+            .sdgs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            footer {
+                padding: 40px 0 20px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="project-badge">WP3 • 4th Call Project</div>
+                <h1>Network Security Training</h1>
+                <p class="subtitle">Empowering Women in Cybersecurity Across Pakistan Universities</p>
+                
+                <div class="partners">
+                    <div class="partner-logo">
+                        <img src="images/logos/eu-logo.png" alt="European Union" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/logos/tein-logo.png" alt="TEIN*CC" loading="lazy">
+                    </div>
+                    <div class="partner-logo">
+                        <img src="images/logos/asia-connect-logo.png" alt="Asia@Connect" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="stat-number">245</span>
+                    <div class="stat-label">Women Professionals Trained</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3</span>
+                    <div class="stat-label">Universities Involved</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">20+</span>
+                    <div class="stat-label">Lab Modules Created</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">€76,650</span>
+                    <div class="stat-label">Project Investment</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Project Objectives</h2>
+            <p class="section-subtitle">Breaking barriers and building cybersecurity expertise among women in Pakistan</p>
+            
+            <div class="objectives-grid">
+                <div class="objective-card">
+                    <div class="objective-icon">👩‍💻</div>
+                    <h3 class="objective-title">Bridge Gender Gap in Cybersecurity</h3>
+                    <p class="objective-description">Reduce gender disparities in the cybersecurity field by providing specialized training opportunities for women IT professionals and educators.</p>
+                </div>
+                <div class="objective-card">
+                    <div class="objective-icon">🔒</div>
+                    <h3 class="objective-title">Enhance Network Security Knowledge</h3>
+                    <p class="objective-description">Build comprehensive understanding of network security tools, protocols, and policies through hands-on, practical training sessions.</p>
+                </div>
+                <div class="objective-card">
+                    <div class="objective-icon">🏫</div>
+                    <h3 class="objective-title">Promote Academic Security Practices</h3>
+                    <p class="objective-description">Implement best security practices in academic environments to improve institutional cybersecurity resilience.</p>
+                </div>
+                <div class="objective-card">
+                    <div class="objective-icon">🚀</div>
+                    <h3 class="objective-title">Encourage Women in Cybersecurity</h3>
+                    <p class="objective-description">Inspire and encourage women's participation in cybersecurity sectors through role modeling and capacity building.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="universities-section">
+        <div class="container">
+            <h2 class="section-title">Participating Universities</h2>
+            <p class="section-subtitle">Comprehensive training delivered across leading women's universities in Pakistan</p>
+            
+            <div class="universities-grid">
+                <div class="university-card">
+                    <div class="university-header">
+                        <div class="university-icon">🎓</div>
+                        <div class="university-name">Fatima Jinnah Women University</div>
+                    </div>
+                    <div class="training-details">
+                        <div class="training-date">September 28 - October 2, 2020</div>
+                        <div class="training-participants">36 Participants (24 Female)</div>
+                        <ul class="training-topics">
+                            <li>Cyberbullying Prevention & Response</li>
+                            <li>Protocol Vulnerabilities Assessment</li>
+                            <li>Public Key Infrastructure (PKI)</li>
+                            <li>Virtual Private Networks (VPNs)</li>
+                            <li>Security Operations Center (SOC)</li>
+                            <li>Cyber Threat Intelligence (CTI)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="university-header">
+                        <div class="university-icon">🎓</div>
+                        <div class="university-name">Women University Swabi</div>
+                    </div>
+                    <div class="training-details">
+                        <div class="training-date">October 12 - 16, 2020</div>
+                        <div class="training-participants">41 Participants (35 Female)</div>
+                        <ul class="training-topics">
+                            <li>Firewall Deployment & Configuration</li>
+                            <li>TLS 1.3 Implementation</li>
+                            <li>Intrusion Detection Systems</li>
+                            <li>Network Monitoring Tools</li>
+                            <li>Security Orchestration (SOAR)</li>
+                            <li>Advanced Threat Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="university-card">
+                    <div class="university-header">
+                        <div class="university-icon">🎓</div>
+                        <div class="university-name">Govt. College Women University Faisalabad</div>
+                    </div>
+                    <div class="training-details">
+                        <div class="training-date">October 26 - 30, 2020</div>
+                        <div class="training-participants">35+ Participants</div>
+                        <ul class="training-topics">
+                            <li>SOC Deployment Strategies</li>
+                            <li>Network Access Control</li>
+                            <li>IP Security Protocols</li>
+                            <li>Incident Response Frameworks</li>
+                            <li>Vulnerability Assessment</li>
+                            <li>Security Policy Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="budget-section">
+        <div class="container">
+            <h2 class="section-title">Project Investment</h2>
+            <div class="budget-container">
+                <div class="budget-overview">
+                    <div class="total-budget">€76,650</div>
+                    <div class="budget-currency">Total Project Budget</div>
+                </div>
+                
+                <div class="budget-breakdown">
+                    <div class="budget-item">
+                        <div class="budget-amount">€40,800</div>
+                        <div class="budget-category">Human Resources</div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-amount">€28,350</div>
+                        <div class="budget-category">Other Services</div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-amount">€4,350</div>
+                        <div class="budget-category">Equipment & Supplies</div>
+                    </div>
+                    <div class="budget-item">
+                        <div class="budget-amount">€3,150</div>
+                        <div class="budget-category">Travel Expenses</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="outcomes-section">
+        <div class="container">
+            <h2 class="section-title">Key Outcomes</h2>
+            <p class="section-subtitle">Measurable impact on women's participation in cybersecurity</p>
+            
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <h3 class="outcome-title">245 Women Professionals Empowered</h3>
+                    <p>Successfully trained female IT professionals across three universities, building cybersecurity capacity and creating future women trainers in the field.</p>
+                </div>
+                <div class="outcome-card">
+                    <h3 class="outcome-title">Advanced Testbed Development</h3>
+                    <p>Established comprehensive testing environments across universities enabling simulation of real-world network threats using IDS, SOC, and VPN technologies.</p>
+                </div>
+                <div class="outcome-card">
+                    <h3 class="outcome-title">Comprehensive Training Resources</h3>
+                    <p>Developed and delivered 20+ lab modules and courseware packages, providing participants with hands-on learning materials for continued development.</p>
+                </div>
+                <div class="outcome-card">
+                    <h3 class="outcome-title">Enhanced Female Visibility</h3>
+                    <p>Created strong role models and increased awareness of women's capabilities in cybersecurity through local and international trainer involvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sdgs-section">
+        <div class="container">
+            <h2 class="section-title">Sustainable Development Goals</h2>
+            <p class="section-subtitle">Contributing to global gender equality and quality education objectives</p>
+            
+            <div class="sdgs-grid">
+                <div class="sdg-card">
+                    <div class="sdg-number">SDG 4</div>
+                    <h4>Quality Education</h4>
+                    <p>Enhancing educational quality through cybersecurity training</p>
+                </div>
+                <div class="sdg-card">
+                    <div class="sdg-number">SDG 5</div>
+                    <h4>Gender Equality</h4>
+                    <p>Promoting women's participation in technology and cybersecurity</p>
+                </div>
+                <div class="sdg-card">
+                    <div class="sdg-number">SDG 9</div>
+                    <h4>Industry & Innovation</h4>
+                    <p>Building resilient infrastructure and promoting innovation</p>
+                </div>
+                <div class="sdg-card">
+                    <div class="sdg-number">SDG 16</div>
+                    <h4>Peace & Justice</h4>
+                    <p>Strengthening institutions through cybersecurity capabilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Project Partners</h3>
+                <p class="footer-text">This gender-inclusive cybersecurity initiative was achieved through strategic collaboration between educational institutions and technology organizations</p>
+                
+                <div class="footer-partners">
+                    <div class="footer-logo">
+                        <p><strong>RISE, Riphah International University</strong><br>Lead Organization</p>
+                    </div>
+                    <div class="footer-logo">
+                        <p><strong>TEIN*CC</strong><br>Technical & Funding Support</p>
+                    </div>
+                    <div class="footer-logo">
+                        <p><strong>Women Universities Pakistan</strong><br>Implementation Partners</p>
+                    </div>
+                    <div class="footer-logo">
+                        <p><strong>Asia@Connect</strong><br>Funding Program</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="border-top: 1px solid #444; padding-top: 20px; opacity: 0.6;">
+                <p>&copy; 2020 Network Security Training Project. Supported by EU Asia@Connect program.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
